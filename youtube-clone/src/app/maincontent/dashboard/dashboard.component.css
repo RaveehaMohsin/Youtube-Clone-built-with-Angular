@@ -1,0 +1,40 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 95vh; 
+    background-color: #333; 
+    padding-top: 20px;
+    margin-top: 5%;
+    width: 13%; 
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #f00; 
+}
+
+.active-link {
+    background-color: red; /* Example background color for active sidebar item */
+}
+
+

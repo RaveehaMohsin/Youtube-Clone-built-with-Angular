@@ -1,0 +1,54 @@
+.navbarmaindiv{
+    background-color: rgb(0, 0, 0); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+
+}
+.navbarbrand
+{
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.navbarbrand h4{
+    color: white;  
+    padding-top:3px;
+    font-weight: 500;
+    overflow-y: hidden;
+}
+
+.navbarbrand2
+{
+    display: inline-flex;
+    align-items: center; 
+    margin-top: 1.8%;
+    margin-left: 2px;
+}
+
+.navbarbrand2 input{
+    width: 70%
+}
+
+
+.navbar3{
+   justify-content: space-between;
+   margin-right: 4%;
+   margin-top: 1.8%;
+
+}
+
+.navbar3 button{
+    margin-right: 5px;
+}
+
+@media (max-width: 835px) {
+    .navbarbrand h4{
+        color: black;  
+    }
+}
