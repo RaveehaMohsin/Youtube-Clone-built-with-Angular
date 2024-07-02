@@ -1,10 +1,13 @@
 <div class="card" style="width: 30rem;">
-    <img src="https://i.ytimg.com/vi/UW4TyxqRAQs/maxresdefault.jpg" class="card-img-top img-fluid" alt="image" height="auto" width="300px" >
+    <img src={{video.thumbnail}} class="card-img-top img-fluid" alt="image"  >
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <div class="card-footer">
-        hi
+      <h4 class="card-title" style="overflow-y: hidden;">{{video.title}}</h4>
+      <p class="card-text">{{video.channelName}}</p>
+      <p class="card-text"><fa-icon [icon]="faEye"></fa-icon> {{video.views}} views<span style="font-weight: bolder;"> &middot; </span>{{video.uploadDate}}</p>
     </div>
 </div>
+
+
+
+
+

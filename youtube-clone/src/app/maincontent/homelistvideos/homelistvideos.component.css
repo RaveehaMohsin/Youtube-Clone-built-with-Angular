@@ -1,0 +1,13 @@
+.videodisplay{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    
+}
+
+.single{
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+   
+}

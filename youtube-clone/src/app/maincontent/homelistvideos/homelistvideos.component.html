@@ -1,1 +1,5 @@
-<p>homelistvideos works!</p>
+<div class="videodisplay">
+    <div class="single" *ngFor="let video of videos">
+      <app-single-video [video]="video" />
+    </div>
+</div>

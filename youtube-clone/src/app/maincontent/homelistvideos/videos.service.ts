@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Video } from "./single-video.model";
+import { Video } from "./single-video/single-video.model";
 
 @Injectable({providedIn : 'root'})
 export class VideoService{
@@ -63,7 +63,7 @@ export class VideoService{
         new Video(
             "Python Django Tutorial",
             "Build a web application with Python Django.",
-            "https://i.ytimg.com/vi/VR0mBlz6yn0/sddefault.jpg",
+            "https://static.codingforentrepreneurs.com/media/series/reactify-django/114c7650-1617-4c85-9bfc-4af289016656.jpg",
             "https://youtu.be/CGLdH5ORX-Y?si=Fje-K-GByOPB_DVr",
             "Python Pro",
             1500,
