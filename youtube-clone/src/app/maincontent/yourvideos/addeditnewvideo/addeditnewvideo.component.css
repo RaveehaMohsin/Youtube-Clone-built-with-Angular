@@ -1,0 +1,43 @@
+*{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color: white;
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 100;
+  }
+
+  .modal-dialog{
+    border-radius: 20px;
+    width: 55%;
+    background-color: #3d3d3d;
+  }
+  .modal-content{
+    background-color: #313131;
+  }
+
+  textarea , input{
+    background-color: transparent;
+    border: 1px solid #878787;
+
+  }
+  textarea:hover , input:hover{
+   border: 2px solid white;
+  }
+
+@media (max-width:800px) {
+    .modal-dialog{
+        margin: 20%;
+    }
+    
+}
+
+  input.ng-invalid.ng-touched , textarea.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

@@ -1,0 +1,49 @@
+*{
+    color: white;
+    
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgb(84, 84, 84) ;
+
+}
+.table-hover tbody tr .action-buttons{
+    opacity: 0;
+
+}
+.table-hover tbody  :hover .action-buttons {   
+   opacity: 1;  
+   
+}
+
+.table-hover tbody tr .description-text{
+    opacity: 1;
+
+}
+.table-hover tbody  :hover .description-text {
+   opacity: 0;  
+}
+
+
+
+table thead tr th{
+    color: rgb(173, 173, 173);
+}
+
+.description-text {
+    color: rgb(173, 173, 173);
+}
+
+
+.action-buttons .tooltip {
+    position: absolute;
+    bottom: -25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+  
+.action-buttons:hover .tooltip {
+    display: block;
+}  
+

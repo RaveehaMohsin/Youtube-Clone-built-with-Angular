@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute,  Router} from '@angular/router';
 import {  faSearch, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +10,18 @@ import {  faSearch, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
 
+  constructor(private router: Router , private route : ActivatedRoute)
+  {
+
+  }
+
   faSearch = faSearch;
   faUser = faUser;
   faVideo = faVideo;
+
+  onGoToAddVideo()
+  {
+    this.router.navigate(['main/yourvideos/addvideo'] , {relativeTo : this.route});
+  }
 
 }

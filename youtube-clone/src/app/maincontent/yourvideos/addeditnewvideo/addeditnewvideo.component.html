@@ -1,0 +1,77 @@
+<app-yourvideos></app-yourvideos>
+<div class="backdrop" style="overflow-y: auto; max-height: 100vh">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" class="pull-left">{{!isUpdating ? 'Upload' : 'Update'}} Details</h2>
+        <button
+          class="pull-right btn btn-danger"
+          style="margin-top: 2rem"
+          (click)="onClose()"
+        ><fa-icon [icon]="faClose"></fa-icon></button>
+      </div>
+
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="videoForm" >
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <textarea                 
+                  class="form-control"
+                  id="title"
+                  name="title"
+                  rows="5"
+                  formControlName="title">
+                ></textarea>
+                <span class="help-block" style="color: #878787;" *ngIf="videoForm.controls['title']?.touched && videoForm.controls['title']?.invalid ">Title is required.</span>
+              </div>
+              
+            </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                      class="form-control"
+                      id="description"
+                      name="description"
+                      rows="5"
+                      formControlName="description">
+                    ></textarea>
+                    <span class="help-block" style="color: #878787;" *ngIf="videoForm.controls['description']?.touched && videoForm.controls['description']?.invalid ">Description is required.</span>
+              </div>           
+          </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="videourl">Video URL</label>
+                    <input type="url" id="videourl" name="videourl" class="form-control" formControlName="videourl">
+                    <span class="help-block" style="color: #878787;" *ngIf="videoForm.controls['videourl']?.touched && videoForm.controls['videourl']?.invalid ">Video URL is required.</span>
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-7">
+                <div class="form-group">
+                    <label for="thumbnail"> Thumbnail</label>
+                    <textarea type="text" rows="4" class="form-control" id="thumbnail" name="thumbnail" formControlName="thumbnail" ></textarea>
+                    <span class="help-block" style="color: #878787;" *ngIf="videoForm.controls['thumbnail']?.touched && videoForm.controls['thumbnail']?.invalid ">Thumbnail URL is required.</span>
+                </div>
+            </div>
+            <div class="col-xs-5" style=" margin-bottom: 1%;">
+               <img [src]="videoForm.value.thumbnail" width="100%" height="auto">
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-danger" type="submit" [disabled]="!videoForm.valid">{{isUpdating ? 'Edit' : 'Upload'}}</button>
+            <button class="btn btn-danger" type="button" (click)="onClose()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

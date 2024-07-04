@@ -1,5 +1,25 @@
+<div class="button-container">
+  <button class="mybutton2 pre-arrow" (click)="scrollLeft(buttons)">&#9664;</button>
+<div class="buttons" #buttons>
+  <button class="btn mybutton">All</button>
+  <button class="btn mybutton">Live</button>
+  <button class="btn mybutton">Music</button>
+  <button class="btn mybutton">Roast</button>
+  <button class="btn mybutton">Cooking</button>
+  <button class="btn mybutton">News</button>
+  <button class="btn mybutton">Songs</button>
+  <button class="btn mybutton">Eduction</button>
+  <button class="btn mybutton">Movie</button>
+  <button class="btn mybutton">Kids</button>
+  <button class="btn mybutton">Live</button>
+  <button class="btn mybutton">Gaming</button>
+  <button class="btn mybutton">StandUp</button>
+</div>
+<button class="mybutton2  next-arrow" (click)="scrollRight(buttons)">&#9654;</button>
+</div>
+
 <div class="videodisplay">
-    <div class="single" *ngFor="let video of videos">
-      <app-single-video [video]="video" />
-    </div>
+  <div class="single" *ngFor="let video of videos">
+    <app-single-video [video]="video" style="cursor: pointer" />
+  </div>
 </div>

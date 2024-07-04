@@ -3,11 +3,93 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     
+    
 }
 
 .single{
   margin-bottom: 3%;
   margin-left: 3%;
   margin-right: 3%;
-   
 }
+
+ 
+
+.button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 2%;
+    width: calc(100% - 40px); /* Adjust this based on the size of the arrow button */
+  }
+  
+  .mybutton{
+    width: auto;
+    margin-right: 2%;
+    
+} 
+
+
+  .mybutton:hover {
+    background-color: #949191;
+    font: 1em sans-serif;
+}
+
+.mybutton2{
+  border-radius: 20px;
+  width:30px;
+  height: 30px;
+  background-color: black;
+  color:rgb(244, 54, 86);
+}
+.mybutton2:hover{
+  background-color: rgb(92, 92, 92);
+}
+  
+  .next-arrow {
+    flex: 0 0 auto;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .pre-arrow {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0;
+
+  }
+  
+  @media (max-width: 1500px) {
+    .buttons {
+      width: calc(100% - 30px);
+      overflow-x: hidden;
+      
+    }
+
+    .next-arrow{
+      opacity: 1;
+    }
+
+    .pre-arrow{
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 1600px) {
+    .buttons {
+      overflow-x: hidden;     
+    }
+  }
+
+
+
+
+
+
+

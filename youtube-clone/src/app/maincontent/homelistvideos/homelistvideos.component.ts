@@ -9,6 +9,22 @@ import { Video } from './single-video/single-video.model';
 })
 export class HomelistvideosComponent implements OnInit {
   videos !: Video[];
+  scrollRight(element: HTMLElement) {
+    element.scrollBy({
+      left: 150, 
+      behavior: 'smooth'
+      
+    });
+  }
+
+  scrollLeft(element: HTMLElement) {
+    element.scrollBy({
+      left: -150, 
+      behavior: 'smooth'
+      
+    });
+  }
+
   constructor(private videoservice : VideoService)
   {
 
