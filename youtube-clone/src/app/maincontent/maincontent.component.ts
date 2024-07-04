@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router  } from '@angular/router';
 
 @Component({
   selector: 'app-maincontent',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './maincontent.component.css'
 })
 export class MaincontentComponent {
+
+  constructor(private router: Router) {}
+
+  isVideoRoute() {
+    return this.router.url.includes('/main');
+  }
 
 }

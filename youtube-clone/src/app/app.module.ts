@@ -16,6 +16,8 @@ import { LikedvideosComponent } from './maincontent/likedvideos/likedvideos.comp
 import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideos.component';
 import { WatchlikeVideoDivComponent } from './maincontent/historyvideos/watchlike-video-div/watchlike-video-div.component';
 import { LikevideoComponent } from './maincontent/likedvideos/likevideo/likevideo.component';
+import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
+import { SinglevideodisplayComponent } from './maincontent/videodisplay/singlevideodisplay/singlevideodisplay.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LikevideoComponent } from './maincontent/likedvideos/likevideo/likevide
     LikedvideosComponent,
     HistoryvideosComponent,
     WatchlikeVideoDivComponent,
-    LikevideoComponent
+    LikevideoComponent,
+    VideodisplayComponent,
+    SinglevideodisplayComponent
   ],
   imports: [
     BrowserModule,

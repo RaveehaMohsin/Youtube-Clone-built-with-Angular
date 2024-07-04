@@ -5,6 +5,7 @@ import { YourvideosComponent } from './maincontent/yourvideos/yourvideos.compone
 import { AddeditnewvideoComponent } from './maincontent/yourvideos/addeditnewvideo/addeditnewvideo.component';
 import { LikedvideosComponent } from './maincontent/likedvideos/likedvideos.component';
 import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideos.component';
+import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'main/homepage',pathMatch:'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path :'history' , component : HistoryvideosComponent},    
     
   ]},
+  {path: 'video/:videoid' , component: VideodisplayComponent},
 ];
 
 @NgModule({
