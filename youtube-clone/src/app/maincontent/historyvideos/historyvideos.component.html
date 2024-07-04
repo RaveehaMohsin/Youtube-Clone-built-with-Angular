@@ -1,0 +1,10 @@
+<div class="row">
+   <h2 style="font-weight: bold; margin-left: 1%; margin-bottom: 2%;">Watch History</h2>
+</div>
+<div class="row" >
+    <div class="col-xs-8" *ngFor="let video of historyvideos ; let i = index">
+      <app-watchlike-video-div [history]="video"></app-watchlike-video-div>
+    </div>
+</div>
+
+

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomelistvideosComponent } from './maincontent/homelistvideos/homelistvideos.component'; 
 import { YourvideosComponent } from './maincontent/yourvideos/yourvideos.component';
 import { AddeditnewvideoComponent } from './maincontent/yourvideos/addeditnewvideo/addeditnewvideo.component';
+import { LikedvideosComponent } from './maincontent/likedvideos/likedvideos.component';
+import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideos.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'main/homepage',pathMatch:'full'},
@@ -10,7 +12,9 @@ const routes: Routes = [
     {path :'homepage' , component : HomelistvideosComponent}, 
     {path :'yourvideos/editvideo/:id' , component : AddeditnewvideoComponent },
     {path :'yourvideos/addvideo' , component : AddeditnewvideoComponent },
-    {path :'yourvideos' , component : YourvideosComponent},    
+    {path :'yourvideos' , component : YourvideosComponent},
+    {path :'likedvideos' , component : LikedvideosComponent},
+    {path :'history' , component : HistoryvideosComponent},    
     
   ]},
 ];

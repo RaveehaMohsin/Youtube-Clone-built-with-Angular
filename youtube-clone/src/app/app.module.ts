@@ -12,6 +12,10 @@ import { HomelistvideosComponent } from './maincontent/homelistvideos/homelistvi
 import { SingleVideoComponent } from './maincontent/homelistvideos/single-video/single-video.component';
 import { YourvideosComponent } from './maincontent/yourvideos/yourvideos.component';
 import { AddeditnewvideoComponent } from './maincontent/yourvideos/addeditnewvideo/addeditnewvideo.component';
+import { LikedvideosComponent } from './maincontent/likedvideos/likedvideos.component';
+import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideos.component';
+import { WatchlikeVideoDivComponent } from './maincontent/historyvideos/watchlike-video-div/watchlike-video-div.component';
+import { LikevideoComponent } from './maincontent/likedvideos/likevideo/likevideo.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AddeditnewvideoComponent } from './maincontent/yourvideos/addeditnewvid
     HomelistvideosComponent,
     SingleVideoComponent,
     YourvideosComponent,
-    AddeditnewvideoComponent
+    AddeditnewvideoComponent,
+    LikedvideosComponent,
+    HistoryvideosComponent,
+    WatchlikeVideoDivComponent,
+    LikevideoComponent
   ],
   imports: [
     BrowserModule,

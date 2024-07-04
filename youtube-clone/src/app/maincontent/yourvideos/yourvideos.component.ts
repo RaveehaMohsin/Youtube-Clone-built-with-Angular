@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowDown, faEye, faPen,  faPlayCircle,  faThumbsDown,  faThumbsUp,  faTrashAlt, faTv } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faEye, faPen,   faThumbsDown,  faThumbsUp,  faTrashAlt, faTv } from '@fortawesome/free-solid-svg-icons';
 import { YourVideosService } from './yourvideos.service';
 import { Video } from '../homelistvideos/single-video/single-video.model';
 import { Router } from '@angular/router';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-yourvideos',
@@ -15,7 +16,7 @@ export class YourvideosComponent implements OnInit {
   faChannel = faTv;
   faArrow = faArrowDown;
   faView = faEye;
-  faViewYotube = faPlayCircle;
+  faViewYotube = faYoutube;
   faDelete = faTrashAlt ;
   faEdit = faPen;
   faThumbsUp = faThumbsUp;

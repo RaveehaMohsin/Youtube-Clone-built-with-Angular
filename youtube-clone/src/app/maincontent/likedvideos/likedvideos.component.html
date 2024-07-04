@@ -1,0 +1,9 @@
+<div class="row">
+    <h2 style="font-weight: bold; margin-left: 1%; margin-bottom: 2%;">Liked Videos</h2>
+ </div>
+ <div class="row" >
+     <div class="col-xs-8" *ngFor="let video of likedvideos ; let i = index">
+       <app-likevideo [likevideo]="video"></app-likevideo>
+     </div>
+ </div>
+ 

@@ -1,0 +1,16 @@
+<div class="row" style="cursor: pointer; margin-bottom: 2%;" >
+    <div class="col-xs-5">
+      <img [src]="history.thumbnail" alt="historythumbnail" width="100%" class="image" />
+    </div>
+    <div class="col-xs-7">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin-top: 1%;margin-right: 2%;">{{history.title}}</h3>
+           <button (click)="deleteVideo()" data-toggle="tooltip" title="Remove" class="button mybutton"><fa-icon  data-toggle="tooltip" title="Remove"  [icon]="faCross"></fa-icon></button>
+        </div>     
+      <p><fa-icon [icon]="faChannel"></fa-icon> {{ history.channelName }}  |  <fa-icon [icon]="faEye"></fa-icon> {{ history.views }} views</p>
+      <p class="description">{{history.description}}</p>
+      <p class="description"><fa-icon [icon]="faThumbsUp"></fa-icon> {{history.likes}} | <fa-icon [icon]="faThumbsDown"></fa-icon> {{history.dislikes}}</p>
+    </div>
+</div>
+
+

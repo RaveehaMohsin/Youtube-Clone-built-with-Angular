@@ -1,9 +1,9 @@
 <div class="sidebar">
     <ul>
         <li routerLinkActive="active-link"><a [routerLink]="'/main/homepage'"><fa-icon [icon]="faHome"></fa-icon>  Home</a></li>
-        <li><a><fa-icon [icon]="faLiked"></fa-icon>  Liked Videos</a></li>
-        <li ><a ><fa-icon [icon]="faHistory"></fa-icon>  History</a></li>
+        <li routerLinkActive="active-link"><a [routerLink]="'/main/likedvideos'"><fa-icon [icon]="faLiked"></fa-icon>  Liked Videos</a></li>
         <li routerLinkActive="active-link"><a [routerLink]="'/main/yourvideos'"><fa-icon [icon]="faProfile"></fa-icon>  Your videos</a></li>
+        <li routerLinkActive="active-link" ><a [routerLink]="'/main/history'" ><fa-icon [icon]="faHistory"></fa-icon>  History</a></li>
         <li><a><fa-icon [icon]="faSettings"></fa-icon> Settings</a></li>
     </ul>
 </div>

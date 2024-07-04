@@ -1,0 +1,21 @@
+*{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.description{
+    color: rgb(173, 173, 173);
+}
+.image
+{
+    border-radius: 15px;
+   
+}
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+.mybutton:hover{
+    border-radius: 50px;
+    background-color: rgb(212, 211, 211);
+}

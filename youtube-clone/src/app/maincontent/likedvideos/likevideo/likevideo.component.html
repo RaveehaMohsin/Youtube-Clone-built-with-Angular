@@ -1,0 +1,15 @@
+<div class="row" style="cursor: pointer; margin-bottom: 2%;" >
+    <div class="col-xs-5">
+      <img [src]="likevideo.thumbnail" alt="historythumbnail" width="100%" class="image" />
+    </div>
+    <div class="col-xs-7">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin-top: 1%;margin-right: 2%;">{{likevideo.title}}</h3>
+           <button (click)="onDislikeVideo()" data-toggle="tooltip" title="Unlike" class="button mybutton"><fa-icon  data-toggle="tooltip" title="Unlike"  [icon]="faCross"></fa-icon></button>
+        </div>     
+      <p><fa-icon [icon]="faChannel"></fa-icon> {{ likevideo.channelName }}  |  <fa-icon [icon]="faEye"></fa-icon> {{ likevideo.views }} views</p>
+      <p class="description">{{likevideo.description}}</p>
+      <p class="description"><fa-icon [icon]="faThumbsUp"></fa-icon> {{likevideo.likes}} | <fa-icon [icon]="faThumbsDown"></fa-icon> {{likevideo.dislikes}}</p>
+    </div>
+</div>
+
