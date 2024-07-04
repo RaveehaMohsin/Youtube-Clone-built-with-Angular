@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,10 @@ import { WatchlikeVideoDivComponent } from './maincontent/historyvideos/watchlik
 import { LikevideoComponent } from './maincontent/likedvideos/likevideo/likevideo.component';
 import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
 import { SinglevideodisplayComponent } from './maincontent/videodisplay/singlevideodisplay/singlevideodisplay.component';
+import { VideoListComponent } from './searchvideopage/searchvideopage.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,14 +39,16 @@ import { SinglevideodisplayComponent } from './maincontent/videodisplay/singlevi
     WatchlikeVideoDivComponent,
     LikevideoComponent,
     VideodisplayComponent,
-    SinglevideodisplayComponent
+    SinglevideodisplayComponent,
+    VideoListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule , FontAwesomeModule , FormsModule , ReactiveFormsModule
+    AppRoutingModule , FontAwesomeModule , FormsModule , ReactiveFormsModule ,
+    HttpClientModule
   ],
   providers: [
-   
+   provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

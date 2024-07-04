@@ -5,8 +5,8 @@
             <h4>YouTube<sup>PK</sup></h4>              
         </div>
         <div class="col-xs-6  navbarbrand2">
-            <input type="text" class="form-control" placeholder="Search...">
-            <button class="btn btn-danger" type="button"><fa-icon [icon]="faSearch"></fa-icon></button>         
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchtext">
+            <button (click)="gotoRelevantPage()" class="btn btn-danger" type="button"><fa-icon [icon]="faSearch"></fa-icon></button>         
         </div>
         <div class="pull-right navbar3">
          <button class="btn btn-danger" data-toggle="tooltip" title="Upload Video" type="button" (click)="onGoToAddVideo()"><fa-icon [icon]="faVideo"></fa-icon></button>

@@ -10,6 +10,7 @@ import {  faSearch, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
 
+  searchtext : string ='';
   constructor(private router: Router , private route : ActivatedRoute)
   {
 
@@ -23,5 +24,12 @@ export class NavbarComponent {
   {
     this.router.navigate(['main/yourvideos/addvideo'] , {relativeTo : this.route});
   }
+
+  gotoRelevantPage()
+  {
+    this.router.navigate(['search' , this.searchtext]);
+  }
+
+
 
 }

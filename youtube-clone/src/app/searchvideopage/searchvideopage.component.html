@@ -1,0 +1,13 @@
+<div *ngIf="videos.length > 0">
+  <div *ngFor="let video of videos">
+    <h3>{{ video.title }}</h3>
+    <h3>{{ video.channelName }}</h3>
+    <h3>{{ video.videoURL }}</h3>
+    <h3>{{ video.description }}</h3>
+    <h3>{{ video.thumbnail }}</h3>
+    <img [src]="video.thumbnail" alt="Video Thumbnail">
+  </div>
+</div>
+<div *ngIf="videos.length === 0">
+  No videos found.
+</div>

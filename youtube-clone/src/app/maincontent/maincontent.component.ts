@@ -11,7 +11,7 @@ export class MaincontentComponent {
   constructor(private router: Router) {}
 
   isVideoRoute() {
-    return this.router.url.includes('/main');
+    return this.router.url.includes('/main' ) || this.router.url.includes('/search');  
   }
 
 }
