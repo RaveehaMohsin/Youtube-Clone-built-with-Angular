@@ -19,7 +19,7 @@ export class NavbarComponent {
   faSearch = faSearch;
   faUser = faUser;
   faVideo = faVideo;
-
+ 
   onGoToAddVideo()
   {
     this.router.navigate(['main/yourvideos/addvideo'] , {relativeTo : this.route});
@@ -28,6 +28,11 @@ export class NavbarComponent {
   gotoRelevantPage()
   {
     this.router.navigate(['search' , this.searchtext]);
+  }
+
+  gotomain()
+  {
+    this.router.navigate(['']);
   }
 
 

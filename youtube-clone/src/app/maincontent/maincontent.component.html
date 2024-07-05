@@ -1,9 +1,10 @@
-<div class="row" style="background-color: #212121;" >
-  <div class="col-xs-2" *ngIf="isVideoRoute()">
-    <app-dashboard></app-dashboard >
+<div class="row" style="background-color: #212121;">
+  <div *ngIf="isVideoRoute()" class="col-xs-2">
+    <app-dashboard></app-dashboard>
   </div>
-  <div class="col-xs-10" style="margin-top: 8%;">
-   <router-outlet></router-outlet>
+  <div [ngClass]="{'col-xs-10': isVideoRoute(), 'col-xs-12': !isVideoRoute()}" style="margin-top: 8%;">
+    <router-outlet></router-outlet>
   </div>
 </div>
+
 

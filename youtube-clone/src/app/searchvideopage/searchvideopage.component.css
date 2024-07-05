@@ -1,3 +1,92 @@
 *{
     color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
+.video-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1%;
+   
+  }
+  
+  .thumbnail-container {
+    flex: 0 0 35%;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .content-container {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  
+  .details {
+    color: #cacaca;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+  }
+  
+  .separator {
+    font-weight: bolder;
+  }
+  
+  .channel-info {
+    display: flex;
+    align-items: center;
+    color: #cacaca;
+    font-size: 0.9em;
+  }
+  
+  .channel-thumbnail {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 0.5em;
+  }
+  
+  .description {
+    color: #cacaca;
+    font-size: 0.9em;
+  }
+  
+  @media (max-width: 768px) {
+    .video-container {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 2%;
+    }
+  
+    .thumbnail-container {
+      margin-right: 0;
+      margin-bottom: 1%;
+    }
+  
+    .thumbnail {
+      width: 100%;
+      height: auto;
+    }
+  
+    .content-container {
+      text-align: center;
+    }
+  
+    .details, .channel-info, .description {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  

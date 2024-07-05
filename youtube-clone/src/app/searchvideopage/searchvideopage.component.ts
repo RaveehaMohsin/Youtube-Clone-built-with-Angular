@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { VideoSearchService } from './searchvideo.service';
 import { Video2 } from './searchvideo.model';
 
@@ -15,7 +15,8 @@ export class VideoListComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private videoService: VideoSearchService
+    private videoService: VideoSearchService, 
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -33,4 +34,10 @@ export class VideoListComponent implements OnInit {
       }
     });
   }
+
+  gotoVideo(video: Video2)
+  {
+    this.router.navigate(['video' , video.channelName, video.videoid]);
+  }
+  
 }

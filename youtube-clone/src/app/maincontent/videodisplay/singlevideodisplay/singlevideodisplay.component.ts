@@ -9,6 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class SinglevideodisplayComponent implements OnInit {
   youtubeid!: string ;
+  youtubeTitleVideo !: string;
   videoUrl: SafeResourceUrl = '';
 
   constructor(private route: ActivatedRoute , private sanitizer: DomSanitizer) {}
@@ -16,6 +17,7 @@ export class SinglevideodisplayComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.youtubeid = params['videoid'];
+      this.youtubeTitleVideo = params['videotitle'];
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.youtubeid}`);
     });
   }

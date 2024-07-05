@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCog, faContactCard, faFileVideo, faHistory, faHome, faPhotoVideo, faThumbsUp, faUserCircle, faVideoCamera, faVideoSlash } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faContactCard, faFileVideo, faHistory, faHome, faPhotoVideo, faSignOut, faThumbsUp, faUserCircle, faVideoCamera, faVideoSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,6 +13,7 @@ export class DashboardComponent {
   faHistory = faHistory
   faProfile = faPhotoVideo;
   faSettings = faCog;
+  faLogout = faSignOut;
   
 
 

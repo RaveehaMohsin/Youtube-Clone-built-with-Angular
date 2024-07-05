@@ -7,6 +7,7 @@ import { LikedvideosComponent } from './maincontent/likedvideos/likedvideos.comp
 import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideos.component';
 import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
 import { VideoListComponent } from './searchvideopage/searchvideopage.component';
+import { InvalidpathComponent } from './invalidpath/invalidpath.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'main/homepage',pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
     
   ]},
   {path: 'search/:searchid' , component: VideoListComponent },
-  {path: 'video/:videoid' , component: VideodisplayComponent},
+  {path: 'video/:videotitle/:videoid' , component: VideodisplayComponent},
+  {path: '**' , component : InvalidpathComponent}
   
 ];
 

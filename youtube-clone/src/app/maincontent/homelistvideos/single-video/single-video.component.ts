@@ -20,7 +20,7 @@ export class SingleVideoComponent {
   gotovideopage()
   {
     const id = this.videoservice.extractYouTubeId(this.video.videoURL)
-    this.router.navigate(['/video' , id])
+    this.router.navigate(['/video' , this.video.channelName, id])
   }
 
 }

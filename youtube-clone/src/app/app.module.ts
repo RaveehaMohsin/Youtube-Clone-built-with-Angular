@@ -20,8 +20,9 @@ import { LikevideoComponent } from './maincontent/likedvideos/likevideo/likevide
 import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
 import { SinglevideodisplayComponent } from './maincontent/videodisplay/singlevideodisplay/singlevideodisplay.component';
 import { VideoListComponent } from './searchvideopage/searchvideopage.component';
-
-
+import { SidevideosComponent } from './maincontent/videodisplay/sidevideos/sidevideos.component';
+import { InvalidpathComponent } from './invalidpath/invalidpath.component';
+import { DropDown } from './maincontent/dashboard/dropdown.directive';
 
 
 @NgModule({
@@ -40,16 +41,20 @@ import { VideoListComponent } from './searchvideopage/searchvideopage.component'
     LikevideoComponent,
     VideodisplayComponent,
     SinglevideodisplayComponent,
-    VideoListComponent
+    VideoListComponent,
+    SidevideosComponent,
+    InvalidpathComponent,
+    DropDown
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule , FontAwesomeModule , FormsModule , ReactiveFormsModule ,
-    HttpClientModule
+    AppRoutingModule , FontAwesomeModule , FormsModule , ReactiveFormsModule
   ],
   providers: [
    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

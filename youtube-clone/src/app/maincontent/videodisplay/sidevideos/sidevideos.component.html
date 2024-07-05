@@ -1,0 +1,18 @@
+<div class="video-container" *ngFor="let video of videos">
+  <div class="thumbnail-container">
+    <img
+     (click)="gotoVideo(video)"
+      [src]="
+        video.thumbnail
+      "
+      alt="videoThumbnail"
+      class="thumbnail"
+    />
+  </div>
+  <div class="content-container">
+    <h6 class="title">{{ video.title}}</h6>
+    <p class="channel-info">
+   {{ video.channelName }} | {{video.publishDate | date }}
+    </p>
+  </div>
+</div>
