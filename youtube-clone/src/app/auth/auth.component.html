@@ -1,0 +1,28 @@
+  <div *ngIf="error" style="margin-bottom: 2%; text-align: center; width: 50%; margin-left: 25%; ">
+    <p class="alert alert-danger">{{error}}</p>
+  </div>
+<div class="container" *ngIf="!isLoading" >
+    <div class="form-container">
+      <div class="form-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="logo">
+        <h2>{{isSignin ? 'Sign In' : 'Sign Up'}}</h2>
+      </div>
+      <form (ngSubmit)="onSubmit(f)" #f ='ngForm'>
+        <div class="form-group">
+          <label for="email"><fa-icon [icon]="fUser"></fa-icon> Email</label>
+          <input type="text" id="email"  ngModel required name="email">
+        </div>
+        <div class="form-group">
+          <label for="password"><fa-icon [icon]="fLock"></fa-icon> Password</label>
+          <input type="password" id="password"  ngModel required name="password">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">{{isSignin ? 'Log In' : 'Sign Up'}}</button>
+        </div>
+      </form>
+      <div class="sign-up-link">
+        <a style="cursor: pointer;" (click)="onswitchmode()">{{!isSignin ? 'Already have an account ? Log In' : "Don't have an account yet ? Create Account"}}</a>
+      </div>
+    </div>
+  </div>
+  

@@ -8,9 +8,11 @@ import { HistoryvideosComponent } from './maincontent/historyvideos/historyvideo
 import { VideodisplayComponent } from './maincontent/videodisplay/videodisplay.component';
 import { VideoListComponent } from './searchvideopage/searchvideopage.component';
 import { InvalidpathComponent } from './invalidpath/invalidpath.component';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'main/homepage',pathMatch:'full'},
+  {path :'auth' , component : AuthComponent}, 
   {path: 'main' , children:[
     {path :'homepage' , component : HomelistvideosComponent}, 
     {path :'yourvideos/editvideo/:id' , component : AddeditnewvideoComponent },

@@ -1,0 +1,91 @@
+
+*{
+    overflow-y: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 10%;
+   height: 70vh
+  }
+  
+  .form-container {
+    width: 100%;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: #333;
+    padding-bottom: 5%;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background-color: #cc0000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #e60000;
+  }
+  
+  .sign-up-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .sign-up-link a {
+    color: #cc0000;
+    text-decoration: none;
+  }
+  
+  .sign-up-link a:hover {
+    text-decoration: underline;
+  }

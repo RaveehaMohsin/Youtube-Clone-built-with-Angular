@@ -1,10 +1,19 @@
-<div (click)="gotovideopage()" class="card" style="width: 33rem;">
+<div (click)="gotovideopage()" class="card" style="width: 33rem;" *ngIf="isvideo1">
     <img src={{video.thumbnail}} class="card-img-top img-fluid" alt="image"  >
     <div class="card-body">
       <h4 class="card-title" style="overflow-y: hidden;">{{video.title}}</h4>
       <p class="card-text">{{video.channelName}}<i class="fas fa-check-circle"></i></p>
       <p class="card-text"><fa-icon [icon]="faEye"></fa-icon> {{video.views}} views<span style="font-weight: bolder;"> &middot; </span>{{video.uploadDate | date}}</p>
     </div>
+</div>
+
+<div (click)="gotovideopage2()" class="card" style="width: 33rem;" *ngIf="!isvideo1">
+  <img src={{video2.thumbnail}} class="card-img-top img-fluid" alt="image"  >
+  <div class="card-body">
+    <h4 class="card-title" style="overflow-y: hidden;">{{video2.title}}</h4>
+    <p class="card-text">{{video2.channelName}}<i class="fas fa-check-circle"></i></p>
+    <p class="card-text"><fa-icon [icon]="faEye"></fa-icon> {{video2.viewCount}} views<span style="font-weight: bolder;"> &middot; </span>{{video2.publishDate| date}}</p>
+  </div>
 </div>
 
 

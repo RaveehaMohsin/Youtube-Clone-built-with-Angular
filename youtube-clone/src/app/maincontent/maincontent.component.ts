@@ -16,7 +16,8 @@ export class MaincontentComponent {
     '/main/yourvideos/editvideo',
     '/main/yourvideos/addvideo',
     '/main/likedvideos',
-    '/main/history'
+    '/main/history',
+    '/search'
   ];
 
   isVideoRoute(): boolean {

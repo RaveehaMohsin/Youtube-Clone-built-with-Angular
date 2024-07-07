@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService } from './videos.service';
 import { Video } from './single-video/single-video.model';
+import { VideoSearchService } from '../../searchvideopage/searchvideo.service';
+import { Video2 } from '../../searchvideopage/searchvideo.model';
+
 
 @Component({
   selector: 'app-homelistvideos',
@@ -8,7 +11,10 @@ import { Video } from './single-video/single-video.model';
   styleUrl: './homelistvideos.component.css'
 })
 export class HomelistvideosComponent implements OnInit {
-  videos !: Video[];
+  isvideo1 = true;
+  videos !: Video[]; 
+  othervideos !: Video2[];
+
   scrollRight(element: HTMLElement) {
     element.scrollBy({
       left: 150, 
@@ -25,7 +31,7 @@ export class HomelistvideosComponent implements OnInit {
     });
   }
 
-  constructor(private videoservice : VideoService)
+  constructor(private videoservice : VideoService , private videosearchservice : VideoSearchService)
   {
 
   }
@@ -33,6 +39,20 @@ export class HomelistvideosComponent implements OnInit {
   ngOnInit(): void {
     this.videos = this.videoservice.getVideos();
     
+  }
+
+  onclickAllPage(section : string)
+  {
+    
+    this.isvideo1 = false;
+    this.videosearchservice.getSearchVideos(section).subscribe(
+      (videos: Video2[]) => {
+        this.othervideos = videos;
+      },
+      (error) => {
+        console.error('Error fetching videos:', error);
+      }
+    );
   }
 
 }

@@ -23,6 +23,7 @@ import { VideoListComponent } from './searchvideopage/searchvideopage.component'
 import { SidevideosComponent } from './maincontent/videodisplay/sidevideos/sidevideos.component';
 import { InvalidpathComponent } from './invalidpath/invalidpath.component';
 import { DropDown } from './maincontent/dashboard/dropdown.directive';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { DropDown } from './maincontent/dashboard/dropdown.directive';
     VideoListComponent,
     SidevideosComponent,
     InvalidpathComponent,
-    DropDown
+    DropDown,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
