@@ -8,8 +8,6 @@ import { Video2 } from './searchvideo.model';
 export class VideoSearchService {
   private readonly apiUrl = 'https://yt-api.p.rapidapi.com/search';
   private readonly headers = new HttpHeaders({
-    // 'X-Rapidapi-Key': 'f88f56ceebmsh8b75cd1acebc8bep117995jsn257a38877a31',
-    'X-Rapidapi-Key': 'e48accf801msha9a44d5b935cc8bp1f70d6jsn2f752f080410',
     'X-Rapidapi-Host': 'yt-api.p.rapidapi.com'
   });
 

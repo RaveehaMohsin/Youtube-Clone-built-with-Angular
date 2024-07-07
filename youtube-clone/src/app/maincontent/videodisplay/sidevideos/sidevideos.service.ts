@@ -7,7 +7,7 @@ import { Video3 } from './video.model';
 
 @Injectable({ providedIn: 'root' })
 export class SideVideoService {
-  private readonly apiKey = 'AIzaSyDhNobMBGtvxYVwtpQrXjxeT15vxc1Xj50';
+  private readonly apiKey =;
   private readonly apiUrl = 'https://www.googleapis.com/youtube/v3/search';
 
   constructor(private http: HttpClient) {}
